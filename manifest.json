@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Image Rotate",
+  "version": "1.0.0",
+  "description": "Adds a rotate button and R shortcut to the image viewer on WhatsApp Web. Runs locally, collects no data.",
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chat-image-rotate@yourname.example",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}
